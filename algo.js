@@ -27,8 +27,9 @@ const computePowerIt = (n, p) => {
 // Méthode récursive
 
 const computerPowerRec = (n, p) => {
-   if (p === 0) return 1;
-  else return n * computerPowerRec(n, p-1);
+  if (p === 0) return 1;
+  if (p < 0) return (1 / n) * computePowerRec(n, p + 1);
+  if (p > 0) return n * computePowerRec(n, p - 1);
 };
 
 
@@ -61,12 +62,20 @@ const computerPowerRec = (n, p) => {
 
 const isPrimeNumber = (n, i) => {
   if (!i) {
-    i = 0;
+    i = 2;
   }
   if (n <= 1) return false;
   else if (n === 2) return true;
   else if (n === i) return true;
   else if (n % i === 0) return false;
-  i+=2;
+  i++;
   return isPrimeNumber(n, i);
 };
+
+
+// Trouver le nombre premier sup ou égal à n
+const findSupPrime = (n) => {
+  if (isPrimeNumber(n)) return n;
+  else return findSupPrime(n + 1);
+}
+
