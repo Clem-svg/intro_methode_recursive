@@ -13,4 +13,4 @@
 </ul>
 
 
-![](https://media.giphy.com/media/4JVTF9zR9BicshFAb7/giphy.gif)
+![Alt Text](https://media.giphy.com/media/4JVTF9zR9BicshFAb7/giphy.gif)
